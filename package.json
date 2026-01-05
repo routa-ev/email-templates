@@ -1,0 +1,26 @@
+{
+  "name": "routa-ev-email-templates",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/routa-ev/email-templates.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/routa-ev/email-templates/issues"
+  },
+  "homepage": "https://github.com/routa-ev/email-templates#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.4",
+    "handlebars": "^4.7.8"
+  }
+}

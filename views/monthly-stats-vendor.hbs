@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Monthly Stats - Routa EV Vendor</title>
+    <!--[if mso]>
+    <style type="text/css">
+        body, table, td {font-family: Arial, sans-serif !important;}
+    </style>
+    <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); background-attachment: fixed; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background: transparent;">
+        <tr>
+            <td align="center" style="padding: 50px 20px;">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background: linear-gradient(180deg, #ffffff 0%, #fafbff 100%); border-radius: 24px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.5);">
+                    {{> header}}
+                    <tr>
+                        <td style="padding: 0 45px 50px;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 0 28px;">
+                                <tr>
+                                    <td align="center" style="padding: 0;">
+                                        <div style="display: inline-block; padding: 14px 40px; background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); border-radius: 50px; box-shadow: 0 10px 30px -5px rgba(139, 92, 246, 0.5);">
+                                            <p style="margin: 0; font-size: 16px; font-weight: 600; color: #FFFFFF; letter-spacing: 0.5px;">
+                                                {{stats.month}}
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <h1 style="margin: 32px 0 20px 0; font-size: 36px; font-weight: 800; line-height: 1.15; color: #1a1f36; text-align: center; letter-spacing: -0.5px;">
+                                Your Monthly Performance
+                            </h1>
+                            <p style="margin: 0 0 40px; font-size: 17px; line-height: 1.7; color: #6b7280; text-align: center;">
+                                Hi {{vendor.name}}, here's how your business performed this month:
+                            </p>
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 0 36px;">
+                                <tr>
+                                    <td style="padding: 0 12px 24px; width: 50%;">
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="padding: 24px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(16, 185, 129, 0.04) 100%); border-radius: 16px; border: 1px solid rgba(16, 185, 129, 0.2); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                                    <p style="margin: 0 0 14px; font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px;">
+                                                        💰 Total Revenue
+                                                    </p>
+                                                    <p style="margin: 0; font-size: 32px; font-weight: 800; color: #10B981; letter-spacing: -0.5px;">
+                                                        {{stats.totalRevenue}}
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td style="padding: 0 12px 24px; width: 50%;">
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="padding: 24px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(139, 92, 246, 0.04) 100%); border-radius: 16px; border: 1px solid rgba(139, 92, 246, 0.2); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                                    <p style="margin: 0 0 14px; font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px;">
+                                                        📦 Orders Delivered
+                                                    </p>
+                                                    <p style="margin: 0 0 10px; font-size: 32px; font-weight: 800; color: #8B5CF6; letter-spacing: -0.5px;">
+                                                        {{stats.ordersDelivered}}
+                                                    </p>
+                                                    <p style="margin: 0; font-size: 19px; font-weight: 700; color: #1a1f36;">
+                                                        {{stats.averageOrderValue}} avg
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 0 36px;">
+                                <tr>
+                                    <td style="padding: 28px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(245, 158, 11, 0.04) 100%); border-radius: 16px; border: 1px solid rgba(245, 158, 11, 0.2); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="padding: 0; width: 70px;">
+                                                    <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); border-radius: 50%; display: inline-block; text-align: center; line-height: 70px; box-shadow: 0 8px 16px -4px rgba(245, 158, 11, 0.5);">
+                                                        <span style="font-size: 32px;">⭐</span>
+                                                    </div>
+                                                </td>
+                                                <td style="padding: 0 0 0 24px;">
+                                                    <p style="margin: 0 0 6px; font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px;">
+                                                        Customer Rating
+                                                    </p>
+                                                    <p style="margin: 0; font-size: 40px; font-weight: 800; color: #F59E0B; letter-spacing: -1px;">
+                                                        {{stats.rating}}
+                                                    </p>
+                                                    <p style="margin: 10px 0 0; font-size: 15px; color: #6b7280;">
+                                                        Based on {{stats.reviews}} reviews this month
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 0 36px;">
+                                <tr>
+                                    <td style="padding: 28px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(59, 130, 246, 0.02) 100%); border-radius: 16px; border: 1px solid rgba(59, 130, 246, 0.15); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="padding: 0; width: 50%;">
+                                                    <p style="margin: 0 0 10px; font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px;">
+                                                        On-Time Delivery Rate
+                                                    </p>
+                                                    <p style="margin: 0; font-size: 36px; font-weight: 800; color: #3B82F6; letter-spacing: -1px;">
+                                                        {{stats.onTimeRate}}
+                                                    </p>
+                                                </td>
+                                                <td style="padding: 0 0 0 24px; width: 50%; text-align: right;">
+                                                    <div style="display: inline-block; padding: 10px 18px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.08) 100%); border-radius: 25px; border: 1px solid rgba(16, 185, 129, 0.3);">
+                                                        <p style="margin: 0; font-size: 14px; font-weight: 700; color: #10B981; letter-spacing: 0.3px;">
+                                                            🎯 Top 10% this month!
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 0 36px;">
+                                <tr>
+                                    <td style="padding: 0 0 16px;">
+                                        <p style="margin: 0; font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px;">
+                                            Revenue Breakdown
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 20px; background: linear-gradient(90deg, rgba(139, 92, 246, 0.08) 0%, transparent 100%); border-bottom: 1px solid rgba(26, 31, 54, 0.08);">
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="padding: 0; width: 50%;">
+                                                    <p style="margin: 0; font-size: 16px; color: #1a1f36;">
+                                                        🍔 Food Orders
+                                                    </p>
+                                                </td>
+                                                <td style="padding: 0; width: 50%; text-align: right;">
+                                                    <p style="margin: 0; font-size: 16px; font-weight: 700; color: #1a1f36;">
+                                                        {{stats.foodOrdersRevenue}}
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 20px; background: linear-gradient(90deg, rgba(245, 158, 11, 0.08) 0%, transparent 100%); border-radius: 0 0 12px 12px;">
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="padding: 0; width: 50%;">
+                                                    <p style="margin: 0; font-size: 16px; color: #1a1f36;">
+                                                        🛒 Grocery Orders
+                                                    </p>
+                                                </td>
+                                                <td style="padding: 0; width: 50%; text-align: right;">
+                                                    <p style="margin: 0; font-size: 16px; font-weight: 700; color: #1a1f36;">
+                                                        {{stats.groceryOrdersRevenue}}
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 0 36px;">
+                                <tr>
+                                    <td style="padding: 24px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.02) 100%); border-radius: 16px; border: 1px solid rgba(16, 185, 129, 0.2); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="padding: 0; width: 50%;">
+                                                    <p style="margin: 0; font-size: 15px; color: #1a1f36;">
+                                                        <strong>📈 Growth vs Last Month:</strong>
+                                                    </p>
+                                                    <p style="margin: 10px 0 0; font-size: 28px; font-weight: 800; color: #10B981; letter-spacing: -1px;">
+                                                        +{{stats.growthPercentage}}
+                                                    </p>
+                                                </td>
+                                                <td style="padding: 0 0 0 24px; width: 50%;">
+                                                    <p style="margin: 0; font-size: 15px; color: #6b7280; line-height: 1.6;">
+                                                        Great job! Your business is growing faster than 85% of vendors in your area.
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center" style="padding: 16px 0;">
+                                        <a href="{{feBaseUrl}}" style="display: inline-block; padding: 20px 52px; background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 700; border-radius: 14px; box-shadow: 0 10px 30px -5px rgba(139, 92, 246, 0.5); border: 1px solid rgba(255, 255, 255, 0.2); letter-spacing: 0.3px;">
+                                            View Detailed Analytics
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {{> footer}}
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

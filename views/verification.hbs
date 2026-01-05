@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Verify Your Account - Routa EV</title>
+    <!--[if mso]>
+    <style type="text/css">
+        body, table, td {font-family: Arial, sans-serif !important;}
+    </style>
+    <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+    <!-- Wrapper Table -->
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+                <!-- Main Container -->
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
+                    <!-- prettier-ignore -->
+                    {{> header}}
+                    
+                    <!-- Content Area -->
+                    <tr>
+                        <td style="padding: 0 40px 40px;">
+                            <!-- Title -->
+                            <h1 style="margin: 24px 0 24px 0; font-size: 32px; font-weight: 700; line-height: 1.2; color: #1D2939; text-align: center;">
+                                Verify Your Account
+                            </h1>
+                            
+                            <!-- Main Content -->
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td style="padding: 0 0 30px;">
+                                        <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: #4a5568; text-align: center;">
+                                            Hi {{user.name}}, please use the following verification code to complete your account setup:
+                                        </p>
+                                        
+                                        <!-- OTP Display -->
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 30px 0;">
+                                            <tr>
+                                                <td align="center" style="padding: 30px 40px; background: linear-gradient(135deg, rgba(105, 39, 218, 0.08) 0%, rgba(29, 41, 57, 0.03) 100%); border-radius: 12px; border: 2px dashed rgba(105, 39, 218, 0.3);">
+                                                    <p style="margin: 0; font-size: 48px; font-weight: 700; letter-spacing: 8px; color: #6927DA; text-align: center; font-family: 'Courier New', monospace;">
+                                                        {{otp}}
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <!-- Instructions -->
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="padding: 18px 20px; border-bottom: 1px solid rgba(29, 41, 57, 0.1);">
+                                                    <p style="margin: 0; font-size: 15px; color: #1D2939;">
+                                                        🔒 This code will expire in <strong style="color: #6927DA;">10 minutes</strong>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 18px 20px; border-bottom: 1px solid rgba(29, 41, 57, 0.1);">
+                                                    <p style="margin: 0; font-size: 15px; color: #1D2939;">
+                                                        ⚠️ Do not share this code with anyone
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 18px 20px;">
+                                                    <p style="margin: 0; font-size: 15px; color: #1D2939;">
+                                                        📱 Enter it in the verification screen in the app
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <!-- Help Text -->
+                                        <p style="margin: 30px 0 0; font-size: 14px; line-height: 1.6; color: #6b7280; text-align: center;">
+                                            If you didn't request this verification code, please ignore this email.
+                                        </p>
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- prettier-ignore -->
+                    {{> footer}}
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

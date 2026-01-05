@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trip Cancelled - Routa EV</title>
+    <!--[if mso]>
+    <style type="text/css">
+        body, table, td {font-family: Arial, sans-serif !important;}
+    </style>
+    <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); background-attachment: fixed; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background: transparent;">
+        <tr>
+            <td align="center" style="padding: 50px 20px;">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background: linear-gradient(180deg, #ffffff 0%, #fafbff 100%); border-radius: 24px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.5);">
+                    {{> header}}
+                    <tr>
+                        <td style="padding: 0 45px 50px;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 0 28px;">
+                                <tr>
+                                    <td align="center" style="padding: 0;">
+                                        <div style="width: 90px; height: 90px; background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%); border-radius: 50%; display: inline-block; text-align: center; line-height: 90px; box-shadow: 0 12px 24px -6px rgba(239, 68, 68, 0.5);">
+                                            <span style="font-size: 48px; color: #ffffff;">✕</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <h1 style="margin: 32px 0 28px 0; font-size: 36px; font-weight: 800; line-height: 1.15; color: #1a1f36; text-align: center; letter-spacing: -0.5px;">
+                                Trip Request Cancelled
+                            </h1>
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td style="padding: 0 0 36px;">
+                                        <p style="margin: 0 0 28px; font-size: 17px; line-height: 1.7; color: #6b7280; text-align: center;">
+                                            Hi {{user.name}}, your trip request has been successfully cancelled. Here's a summary of cancelled trip:
+                                        </p>
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 0 36px;">
+                                            <tr>
+                                                <td style="padding: 28px; background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, rgba(245, 158, 11, 0.04) 100%); border-radius: 16px; border: 1px solid rgba(239, 68, 68, 0.2); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                        <tr>
+                                                            <td style="padding: 0 0 20px;">
+                                                                <p style="margin: 0 0 6px; font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px;">
+                                                                    From
+                                                                </p>
+                                                                <p style="margin: 0; font-size: 17px; font-weight: 600; color: #1a1f36;">
+                                                                    {{trip.pickupLocation}}
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center" style="padding: 10px 0;">
+                                                                <div style="font-size: 24px; color: #EF4444;">↓</div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 20px 0;">
+                                                                <p style="margin: 0 0 6px; font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px;">
+                                                                    To
+                                                                </p>
+                                                                <p style="margin: 0; font-size: 17px; font-weight: 600; color: #1a1f36;">
+                                                                    {{trip.dropoffLocation}}
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 20px 0; border-top: 1px solid rgba(26, 31, 54, 0.08);"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 14px 0;">
+                                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                    <tr>
+                                                                        <td style="padding: 0; width: 50%;">
+                                                                            <p style="margin: 0; font-size: 15px; color: #6b7280;">
+                                                                                📅 {{trip.scheduledDate}}
+                                                                            </p>
+                                                                        </td>
+                                                                        <td style="padding: 0; width: 50%; text-align: right;">
+                                                                            <p style="margin: 0; font-size: 15px; color: #6b7280;">
+                                                                                #{{trip.tripId}}
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 10px 0;">
+                                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                    <tr>
+                                                                        <td style="padding: 0; width: 50%;">
+                                                                            <p style="margin: 0; font-size: 15px; color: #6b7280;">
+                                                                                Cancellation Fee
+                                                                            </p>
+                                                                        </td>
+                                                                        <td style="padding: 0; width: 50%; text-align: right;">
+                                                                            <p style="margin: 0; font-size: 19px; font-weight: 800; color: {{#if trip.cancellationFee}}#EF4444{{else}}#10B981{{/if}}; letter-spacing: -0.5px;">
+                                                                                {{#if trip.cancellationFee}}{{trip.cancellationFee}}{{else}}$0.00{{/if}}
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 0 36px;">
+                                            <tr>
+                                                <td style="padding: 24px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.04) 100%); border-radius: 16px; border-left: 5px solid #3B82F6; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                                    <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #1a1f36;">
+                                                        <strong>💡 Did you know?</strong> You can cancel trips for free up to 5 minutes after booking, or 10 minutes before scheduled pickup. After that, a small fee may apply.
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td align="center" style="padding: 16px 0;">
+                                                    <a href="{{feBaseUrl}}" style="display: inline-block; padding: 20px 52px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #FFFFFF; text-decoration: none; font-size: 17px; font-weight: 700; border-radius: 14px; box-shadow: 0 10px 30px -5px rgba(102, 126, 234, 0.5); border: 1px solid rgba(255, 255, 255, 0.2); letter-spacing: 0.3px;">
+                                                        Book a New Trip
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {{> footer}}
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

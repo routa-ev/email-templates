@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Order Delivered - Routa EV</title>
+    <!--[if mso]>
+    <style type="text/css">
+        body, table, td {font-family: Arial, sans-serif !important;}
+    </style>
+    <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); background-attachment: fixed; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background: transparent;">
+        <tr>
+            <td align="center" style="padding: 50px 20px;">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background: linear-gradient(180deg, #ffffff 0%, #fafbff 100%); border-radius: 24px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.5);">
+                    {{> header}}
+                    <tr>
+                        <td style="padding: 0 45px 50px;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 0 28px;">
+                                <tr>
+                                    <td align="center" style="padding: 0;">
+                                        <div style="width: 90px; height: 90px; background: linear-gradient(135deg, #10B981 0%, #059669 100%); border-radius: 50%; display: inline-block; text-align: center; line-height: 90px; box-shadow: 0 12px 24px -6px rgba(16, 185, 129, 0.5);">
+                                            <span style="font-size: 48px; color: #ffffff;">✓</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <h1 style="margin: 32px 0 28px 0; font-size: 36px; font-weight: 800; line-height: 1.15; color: #1a1f36; text-align: center; letter-spacing: -0.5px;">
+                                Order Delivered! 🎉
+                            </h1>
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td style="padding: 0 0 36px;">
+                                        <p style="margin: 0 0 28px; font-size: 17px; line-height: 1.7; color: #6b7280; text-align: center;">
+                                            Hi {{user.name}}, great news! Your order has been successfully delivered. Here's a summary of your order:
+                                        </p>
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 0 36px;">
+                                            <tr>
+                                                <td style="padding: 28px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.06) 0%, rgba(59, 130, 246, 0.04) 100%); border-radius: 16px; border: 1px solid rgba(16, 185, 129, 0.15); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                        <tr>
+                                                            <td style="padding: 10px 0;">
+                                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                    <tr>
+                                                                        <td style="padding: 0; width: 50%;">
+                                                                            <p style="margin: 0; font-size: 14px; color: #6b7280;">
+                                                                                Order ID
+                                                                            </p>
+                                                                        </td>
+                                                                        <td style="padding: 0; width: 50%; text-align: right;">
+                                                                            <p style="margin: 0; font-size: 16px; font-weight: 700; color: #1a1f36;">
+                                                                                #{{order.orderId}}
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 10px 0;">
+                                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                    <tr>
+                                                                        <td style="padding: 0; width: 50%;">
+                                                                            <p style="margin: 0; font-size: 14px; color: #6b7280;">
+                                                                                Order Code
+                                                                            </p>
+                                                                        </td>
+                                                                        <td style="padding: 0; width: 50%; text-align: right;">
+                                                                            <p style="margin: 0; font-size: 16px; font-weight: 700; color: #1a1f36;">
+                                                                                {{order.orderCode}}
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 10px 0; border-top: 1px solid rgba(26, 31, 54, 0.08);">
+                                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                    <tr>
+                                                                        <td style="padding: 0; width: 50%;">
+                                                                            <p style="margin: 0; font-size: 14px; color: #6b7280;">
+                                                                                Order Type
+                                                                            </p>
+                                                                        </td>
+                                                                        <td style="padding: 0; width: 50%; text-align: right;">
+                                                                            <p style="margin: 0; font-size: 16px; font-weight: 700; color: #1a1f36;">
+                                                                                {{order.orderType}}
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 10px 0; border-top: 1px solid rgba(26, 31, 54, 0.08);">
+                                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                    <tr>
+                                                                        <td style="padding: 0; width: 50%;">
+                                                                            <p style="margin: 0; font-size: 14px; color: #6b7280;">
+                                                                                Delivery Address
+                                                                            </p>
+                                                                        </td>
+                                                                        <td style="padding: 0; width: 50%; text-align: right;">
+                                                                            <p style="margin: 0; font-size: 16px; font-weight: 700; color: #1a1f36;">
+                                                                                {{order.deliveryAddress}}
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 20px 0; border-top: 1px solid rgba(26, 31, 54, 0.08);"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 10px 0;">
+                                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                    <tr>
+                                                                        <td style="padding: 0; width: 50%;">
+                                                                            <p style="margin: 0; font-size: 14px; color: #6b7280;">
+                                                                                📅 Delivered on
+                                                                            </p>
+                                                                        </td>
+                                                                        <td style="padding: 0; width: 50%; text-align: right;">
+                                                                            <p style="margin: 0; font-size: 16px; font-weight: 700; color: #1a1f36;">
+                                                                                {{order.deliveryTime}}
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 20px 0; border-top: 1px solid rgba(26, 31, 54, 0.08);">
+                                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                    <tr>
+                                                                        <td style="padding: 0; width: 50%;">
+                                                                            <p style="margin: 0; font-size: 14px; color: #6b7280;">
+                                                                                Total Paid
+                                                                            </p>
+                                                                        </td>
+                                                                        <td style="padding: 0; width: 50%; text-align: right;">
+                                                                            <p style="margin: 0; font-size: 22px; font-weight: 800; color: #10B981; letter-spacing: -0.5px;">
+                                                                                {{order.total}}
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td align="center" style="padding: 16px 0;">
+                                                    <a href="{{order.ratingUrl}}" style="display: inline-block; padding: 18px 48px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; border-radius: 14px; box-shadow: 0 10px 30px -5px rgba(102, 126, 234, 0.5); border: 1px solid rgba(255, 255, 255, 0.2); letter-spacing: 0.3px;">
+                                                        Rate Your Order
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="padding: 10px 0 16px;">
+                                                    <a href="{{feBaseUrl}}" style="display: inline-block; padding: 18px 48px; background-color: transparent; color: #667eea; text-decoration: none; font-size: 16px; font-weight: 700; border-radius: 14px; border: 2px solid #667eea; letter-spacing: 0.2px;">
+                                                        Order Again
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {{> footer}}
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
