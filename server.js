@@ -28,6 +28,7 @@ app.get("/", (req, res) => {
       <li><a href="/verification-success">Account Verification Success</a></li>
       <li><a href="/password-reset-otp">Password Reset OTP</a></li>
       <li><a href="/password-change-otp">Password Change OTP</a></li>
+      <li><a href="/ethereum-address-bound">Ethereum Address Bound</a></li>
       <li><a href="/kyc-submitted">KYC Submitted</a></li>
       <li><a href="/kyc-rejected">KYC Rejected</a></li>
       <li><a href="/kyc-approved">KYC Approved</a></li>
@@ -97,6 +98,17 @@ app.get("/password-change-otp", (req, res) => {
     otp: "987654",
   };
   res.render("password-change-otp", sampleData);
+});
+
+app.get("/ethereum-address-bound", (req, res) => {
+  const sampleData = {
+    user: {
+      name: "John Doe",
+    },
+    ethereumAddress: "0x1234...5678",
+    feBaseUrl: "https://app.routaev.com",
+  };
+  res.render("ethereum-address-bound", sampleData);
 });
 
 app.get("/kyc-submitted", (req, res) => {
