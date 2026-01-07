@@ -26,6 +26,8 @@ app.get("/", (req, res) => {
       <li><a href="/welcome">Welcome Email</a></li>
       <li><a href="/verification">Account Verification OTP</a></li>
       <li><a href="/verification-success">Account Verification Success</a></li>
+      <li><a href="/password-reset-otp">Password Reset OTP</a></li>
+      <li><a href="/password-change-otp">Password Change OTP</a></li>
       <li><a href="/kyc-submitted">KYC Submitted</a></li>
       <li><a href="/kyc-rejected">KYC Rejected</a></li>
       <li><a href="/kyc-approved">KYC Approved</a></li>
@@ -75,6 +77,26 @@ app.get("/verification-success", (req, res) => {
     feBaseUrl: "https://app.routaev.com",
   };
   res.render("verification-success", sampleData);
+});
+
+app.get("/password-reset-otp", (req, res) => {
+  const sampleData = {
+    user: {
+      name: "John Doe",
+    },
+    otp: "654321",
+  };
+  res.render("password-reset-otp", sampleData);
+});
+
+app.get("/password-change-otp", (req, res) => {
+  const sampleData = {
+    user: {
+      name: "John Doe",
+    },
+    otp: "987654",
+  };
+  res.render("password-change-otp", sampleData);
 });
 
 app.get("/kyc-submitted", (req, res) => {
